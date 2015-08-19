@@ -1,0 +1,14 @@
+OBJS = PrimePalindrome.o
+CC = g++
+DEBUG = -g
+CFLAGS = -Wall -c $(DEBUG)
+LFLAGS = -Wall $(DEBUG)
+
+PrimePalindrome : $(OBJS)
+		   $(CC) $(LFLAGS) $(OBJS) -o PrimePalindrome
+
+PrimePalindrome.o : PrimePalindrome.cpp
+			 $(CC) $(CFLAGS) PrimePalindrome.cpp
+			 
+clean:
+	\rm *.o *~ PrimePalindrome
